@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* wrappers and containers */
+.wrapper{
+  @apply w-full h-screen bg-white text-black dark:bg-[#121212] dark:text-white;
+}
+.sidebar{
+  @apply  h-full border-r bordered overflow-y-scroll hide-scrollbar;
+}
+
+/*flex */
+.flex-a{
+  @apply flex items-center;
+}
+.flex-b{
+  @apply flex items-center justify-between;
+}
+.flex-c{
+  @apply flex items-center justify-center;
+}
+
+.active{
+  @apply bg-primary rounded-lg p-2 text-white hover:bg-primary;
+}
+
+/* borders */
+.ui{
+  @apply bg-[#F0F0F0] dark:bg-[#282828]
+}
+.bordered{
+  @apply border-gray-300 dark:border-[#333];
+}
